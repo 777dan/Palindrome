@@ -41,6 +41,7 @@ let arr = [
 ];
 
 function palindrom(value) {
+    let a = false;
     let v = value.toLowerCase();
 
     //let res = v.replace(/ /g, "");
@@ -52,11 +53,12 @@ function palindrom(value) {
     let str = arrFromStr.join("");
     let reversedArrFromStr = arrFromStr.reverse();
     let reversedStr = reversedArrFromStr.join("");
-    if (reversedStr == str) {
-        console.log(str);
-        console.log(reversedStr);
-    }
-    return value > 18;
+    // if (reversedStr == str) {
+    //     console.log(str);
+    //     console.log(reversedStr);
+    // }
+    // return value > 18;
+    return reversedStr == str ? false : true;
 }
 
 const palindroms = arr.filter(palindrom);
